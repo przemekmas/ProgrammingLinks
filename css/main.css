@@ -10,3 +10,11 @@ body {
 .tool-icon-td {
     width: 1px;
 }
+
+.tool-link-td {
+    width: 1px;
+}
+
+.tool-link-a {
+    text-decoration: none;
+}

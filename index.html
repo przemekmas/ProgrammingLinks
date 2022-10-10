@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Programming Links">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" href="css/main.css?v=1.0.2">
+    <link rel="stylesheet" href="css/main.css?v=1.0.3">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/css/bootstrap.min.css"
@@ -16,7 +16,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/js/bootstrap.min.js"
         integrity="sha512-5BqtYqlWfJemW5+v+TZUs22uigI8tXeVah5S/1Z6qBLVO7gakAOtkOzUtgq6dsIo5c0NJdmGPs0H9I+2OHUHVQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="js/main.js?v=1.0.1"></script>
+    <script src="js/main.js?v=1.0.2"></script>
 </head>
 
 <body>
@@ -31,45 +31,55 @@
 <script type="text/javascript">
     function InitElements() {
         createSection("Source Control & Tools", "sourceControlLinksId", "linkElementsId");
-        addLinkToSection("sourceControlLinksId", "GitHub", "https://github.com/", "Link");
-        addLinkToSection("sourceControlLinksId", "Git", "https://git-scm.com/", "Link");
-        addLinkToSection("sourceControlLinksId", "Azure DevOps", "https://www.azure.com/", "Link");
-        addLinkToSection("sourceControlLinksId", "Microsoft Azure", "https://portal.azure.com/", "Link");
-        addLinkToSection("sourceControlLinksId", "Stack Overflow", "https://stackoverflow.com/", "Link");
-
+        addLinkToSection("sourceControlLinksId", "GitHub", "https://github.com/");
+        addLinkToSection("sourceControlLinksId", "Git", "https://git-scm.com/");
+        addLinkToSection("sourceControlLinksId", "Azure DevOps", "https://www.azure.com/");
+        addLinkToSection("sourceControlLinksId", "Microsoft Azure", "https://portal.azure.com/");
+        addLinkToSection("sourceControlLinksId", "Stack Overflow", "https://stackoverflow.com/");
+        
         createSection("IDE & Text Readers", "ideTextReaderLinksId", "linkElementsId");
-        addLinkToSection("ideTextReaderLinksId", "Visual Studio 2022", "https://visualstudio.microsoft.com/vs/", "Download Link");
-        addLinkToSection("ideTextReaderLinksId", "Visual Studio Code", "https://code.visualstudio.com/", "Download Link");
-        addLinkToSection("ideTextReaderLinksId", "SQL Server Management Studio", "https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16", "Download Link");
-        addLinkToSection("ideTextReaderLinksId", "SQL Server Developer/Express", "https://www.microsoft.com/en-gb/sql-server/sql-server-downloads", "Download Link");
-        addLinkToSection("ideTextReaderLinksId", "Notepad++", "https://notepad-plus-plus.org/downloads/", "Download Link");
-        addLinkToSection("ideTextReaderLinksId", "Agent Ransack", "https://www.mythicsoft.com/agentransack/", "Download Link");
+        addLinkToSection("ideTextReaderLinksId", "Visual Studio 2022", "https://visualstudio.microsoft.com/vs/");
+        addLinkToSection("ideTextReaderLinksId", "Visual Studio Code", "https://code.visualstudio.com/");
+        addLinkToSection("ideTextReaderLinksId", "SQL Server Management Studio", "https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16");
+        addLinkToSection("ideTextReaderLinksId", "SQL Server Developer/Express", "https://www.microsoft.com/en-gb/sql-server/sql-server-downloads");
+        addLinkToSection("ideTextReaderLinksId", "Notepad++", "https://notepad-plus-plus.org/downloads/");
+        addLinkToSection("ideTextReaderLinksId", "Agent Ransack", "https://www.mythicsoft.com/agentransack/");
 
         createSection("SEO & Analytics", "seoAnalyticsLinksId", "linkElementsId");
-        addLinkToSection("seoAnalyticsLinksId", "Google Analytics", "https://analytics.google.com/", "Tool Link");
-        addLinkToSection("seoAnalyticsLinksId", "Google Page Insights", "https://pagespeed.web.dev/", "Tool Link");
-        addLinkToSection("seoAnalyticsLinksId", "Google Search Console", "https://search.google.com/search-console", "Tool Link");
-        addLinkToSection("seoAnalyticsLinksId", "DNS Checker", "https://dnschecker.org/", "Tool Link");
-        addLinkToSection("seoAnalyticsLinksId", "Uptime Robot", "https://uptimerobot.com/", "Tool Link");
-        addLinkToSection("seoAnalyticsLinksId", "SEO Checker", "https://www.seobility.net/en/seocheck/", "Tool Link");
+        addLinkToSection("seoAnalyticsLinksId", "Google Analytics", "https://analytics.google.com/");
+        addLinkToSection("seoAnalyticsLinksId", "Google Page Insights", "https://pagespeed.web.dev/");
+        addLinkToSection("seoAnalyticsLinksId", "Google Search Console", "https://search.google.com/search-console");
+        addLinkToSection("seoAnalyticsLinksId", "DNS Checker", "https://dnschecker.org/");
+        addLinkToSection("seoAnalyticsLinksId", "Uptime Robot", "https://uptimerobot.com/");
+        addLinkToSection("seoAnalyticsLinksId", "SEO Checker", "https://www.seobility.net/en/seocheck/");
 
         createSection("Front End Frameworks & Tools", "frontendFrameworksId", "linkElementsId");
-        addLinkToSection("frontendFrameworksId", "Fontawesome", "https://fontawesome.com/", "Download Link");
-        addLinkToSection("frontendFrameworksId", "Bootstrap", "https://getbootstrap.com/", "Download Link");
-        addLinkToSection("frontendFrameworksId", "JQuery", "https://jquery.com/", "Download Link");
-        addLinkToSection("frontendFrameworksId", "CDNJS", "https://cdnjs.com/", "Download Link");
-        addLinkToSection("frontendFrameworksId", "CodePen", "https://codepen.io/", "Download Link");
-
+        addLinkToSection("frontendFrameworksId", "Fontawesome", "https://fontawesome.com/");
+        addLinkToSection("frontendFrameworksId", "Bootstrap", "https://getbootstrap.com/");
+        addLinkToSection("frontendFrameworksId", "JQuery", "https://jquery.com/");
+        addLinkToSection("frontendFrameworksId", "CDNJS", "https://cdnjs.com/");
+        addLinkToSection("frontendFrameworksId", "CodePen", "https://codepen.io/");
+        addLinkToSection("frontendFrameworksId", "Colour Contrast Check", "https://snook.ca/technical/colour_contrast/colour.html#fg=FFFFFF,bg=000000");
+        
         createSection("Web/API Tools & Frameworks", "webApiToolsFrameworksId", "linkElementsId");
-        addLinkToSection("webApiToolsFrameworksId", ".NET", "https://dotnet.microsoft.com/en-us/download/dotnet", "Download Link");
-        addLinkToSection("webApiToolsFrameworksId", "Postman", "https://www.postman.com/", "Download Link");
-        addLinkToSection("webApiToolsFrameworksId", "Hangfire", "https://www.hangfire.io/", "Download Link");
-        addLinkToSection("webApiToolsFrameworksId", "NSwagStudio", "https://github.com/RicoSuter/NSwag/wiki/NSwagStudio", "Download Link");
+        addLinkToSection("webApiToolsFrameworksId", ".NET", "https://dotnet.microsoft.com/en-us/download/dotnet");
+        addLinkToSection("webApiToolsFrameworksId", "Postman", "https://www.postman.com/");
+        addLinkToSection("webApiToolsFrameworksId", "Hangfire", "https://www.hangfire.io/");
+        addLinkToSection("webApiToolsFrameworksId", "NSwagStudio", "https://github.com/RicoSuter/NSwag/wiki/NSwagStudio");
 
         createSection("Web Hosting", "webHostingId", "linkElementsId");
-        addLinkToSection("webHostingId", "IONOS", "https://www.ionos.co.uk/", "Link");
-        addLinkToSection("webHostingId", "20i", "https://www.20i.com/", "Link");
-        addLinkToSection("webHostingId", "WordPress", "https://wordpress.com/", "Link");
+        addLinkToSection("webHostingId", "IONOS", "https://www.ionos.co.uk/");
+        addLinkToSection("webHostingId", "20i", "https://www.20i.com/");
+        addLinkToSection("webHostingId", "WordPress", "https://wordpress.com/");
+
+        createSection("MSI & Tools", "msiToolsId", "linkElementsId");
+        addLinkToSection("msiToolsId", "WiX Toolset", "https://wixtoolset.org/");
+        addLinkToSection("msiToolsId", "Wix Edit", "https://wixedit.github.io/");
+        addLinkToSection("msiToolsId", "dotPeek Decompiler", "https://www.jetbrains.com/decompiler/");
+
+        createSection("Online Code Tools", "onlineCodeToolsId", "linkElementsId");
+        addLinkToSection("onlineCodeToolsId", "JS Fiddle", "https://jsfiddle.net/");
+        addLinkToSection("onlineCodeToolsId", ".NET Fiddle", "https://dotnetfiddle.net/");
     }
 
     InitElements();

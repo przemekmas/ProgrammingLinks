@@ -8,7 +8,7 @@ $(document).ready(function() {
 
 function createSection(title, bodyId, parentId) {
     var sectionElement = document.createElement("div");
-    sectionElement.setAttribute("class", "col-sm-12 col-md-6 col-lg-4 mt-2");
+    sectionElement.setAttribute("class", "col-sm-12 col-md-6 col-lg-4 col-xl-3 mt-2");
     var cardElement = document.createElement("div");
     cardElement.setAttribute("class", "card");
     sectionElement.appendChild(cardElement);
@@ -20,21 +20,8 @@ function createSection(title, bodyId, parentId) {
     bodyElement.setAttribute("class", "card-body");
     var tableElement = document.createElement("table");
     tableElement.setAttribute("class", "table table-hover");
-    var theadElement = document.createElement("thead");
-    var trElement = document.createElement("tr");
-    var td1Element = document.createElement("td");
-    td1Element.setAttribute("class", "tool-icon-td");
-    var td2Element = document.createElement("td");
-    var td3Element = document.createElement("td");
-    td2Element.innerText = "Name";
-    td3Element.innerText = "Link";
     var tbodyElement = document.createElement("tbody");
     tbodyElement.setAttribute("id", bodyId);
-    trElement.appendChild(td1Element);
-    trElement.appendChild(td2Element);
-    trElement.appendChild(td3Element);
-    theadElement.appendChild(trElement)
-    tableElement.appendChild(theadElement);
     tableElement.appendChild(tbodyElement);
     bodyElement.appendChild(tableElement);
     cardElement.appendChild(bodyElement);
@@ -42,23 +29,26 @@ function createSection(title, bodyId, parentId) {
     parentElement.appendChild(sectionElement);
 }
 
-function addLinkToSection(bodyId, name, link, linkText) {
+function addLinkToSection(bodyId, name, link) {
     if (bodyId != null) {
         var bodyElement = document.getElementById(bodyId);
 
         if (bodyElement != null) {
             var trElement = document.createElement("tr");
             var td1Element = document.createElement("td");
+            td1Element.setAttribute("class", "tool-icon-td");
             var iconElement = document.createElement("img");
             iconElement.setAttribute("src", "https://s2.googleusercontent.com/s2/favicons?domain_url=" + link);
             td1Element.appendChild(iconElement);
             var td2Element = document.createElement("td");
             td2Element.innerText = name;
             var td3Element = document.createElement("td");
+            td3Element.setAttribute("class", "tool-link-td");
             var aElement = document.createElement("a");
             aElement.setAttribute("target", "_blank");
             aElement.setAttribute("href", link);
-            aElement.innerText = linkText;
+            aElement.setAttribute("class", "tool-link-a")
+            aElement.innerText = "🔗";
             td3Element.appendChild(aElement);
             trElement.appendChild(td1Element);
             trElement.appendChild(td2Element);
