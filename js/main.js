@@ -8,16 +8,32 @@ $(document).ready(function() {
 
 function createSection(title, bodyId, parentId) {
     var sectionElement = document.createElement("div");
-    sectionElement.setAttribute("class", "col-sm-12 col-md-6 col-lg-4 col-xl-3 mt-2");
+    sectionElement.setAttribute("class", "col-sm-12 col-md-6 col-lg-4 col-xl-3 mt-2 equal-height-col");
     var cardElement = document.createElement("div");
     cardElement.setAttribute("class", "card");
     sectionElement.appendChild(cardElement);
+
     var headerElement = document.createElement("div");
-    headerElement.setAttribute("class", "card-header");
-    headerElement.innerText = title;
+    headerElement.setAttribute("class", "card-header d-flex justify-content-between align-items-center");
+
+    var titleSpan = document.createElement("span");
+    titleSpan.innerText = title;
+    headerElement.appendChild(titleSpan);
+
+    var chevronDown = "<span style='font-size:1.2em;'>&#x25BC;</span>";
+    var chevronRight = "<span style='font-size:1.2em;'>&#x25B6;</span>";
+    var toggleBtn = document.createElement("button");
+    toggleBtn.setAttribute("type", "button");
+    toggleBtn.setAttribute("class", "btn btn-sm btn-outline-secondary");
+    toggleBtn.innerHTML = chevronDown;
+    headerElement.appendChild(toggleBtn);
+
     cardElement.appendChild(headerElement);
+
     var bodyElement = document.createElement("div");
     bodyElement.setAttribute("class", "card-body");
+    bodyElement.style.display = "block";
+
     var tableElement = document.createElement("table");
     tableElement.setAttribute("class", "table table-hover");
     var tbodyElement = document.createElement("tbody");
@@ -25,6 +41,19 @@ function createSection(title, bodyId, parentId) {
     tableElement.appendChild(tbodyElement);
     bodyElement.appendChild(tableElement);
     cardElement.appendChild(bodyElement);
+
+    toggleBtn.addEventListener("click", function() {
+        if (bodyElement.style.display === "none") {
+            bodyElement.style.display = "block";
+            cardElement.style.height = "100%";
+            toggleBtn.innerHTML = chevronDown;
+        } else {
+            bodyElement.style.display = "none";
+            cardElement.style.height = "auto";
+            toggleBtn.innerHTML = chevronRight;
+        }
+    });
+
     var parentElement = document.getElementById(parentId);
     parentElement.appendChild(sectionElement);
 }

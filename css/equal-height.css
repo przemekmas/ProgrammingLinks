@@ -1,0 +1,19 @@
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.equal-height-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.equal-height-col .card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.equal-height-col .card-body {
+    flex: 1 1 auto;
+}
